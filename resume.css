@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: radial-gradient(circle at center, 
+              #ffffff 0%, 
+              #f8bc64 30%,  /* Light orange */
+              #e678ad 60%,  /* Light pink */
+              #eb6969 90%); /* Light red */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  border: 5px solid transparent; /* Add a border to apply gradient */
+  background-clip: padding-box; /* Clip background to padding-box */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  text-align: center;
+  padding: 50px 30px;
+  max-width: 600px;
+  margin: 20px;
+  transition: transform 0.3s ease; /* Adding a transition for hover effect */
+  position: relative;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, 
+              #ffffff 0%, 
+              #f99909 30%,  /* Light orange */
+              #e678ad 60%,  /* Light pink */
+              #eb6969 90%); /* Light red */
+}
+
+h1 {
+  background: radial-gradient(circle at center, 
+              #f5a226 30%,  /* Light orange */
+              #e678ad 60%,  /* Light pink */
+              #eb6969 90%); /* Light red */
+  -webkit-background-clip: text; /* For webkit browsers */
+  -webkit-text-fill-color: transparent; /* For webkit browsers */
+  background-clip: text; /* Standard syntax */
+  font-size: 2.5em; /* Slightly larger font size */
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555; /* Softer text color */
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #555;
+  text-align: left;
+  margin: 20px 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1.1em; /* Slightly larger font size */
+  transition: color 0.3s ease, transform 0.3s ease; /* Adding a smooth transition */
+}
+
+ul li:hover {
+  color: #ff6f61; /* Change color on hover */
+  transform: translateX(10px); /* Slightly move right on hover */
+}
+
+.feature-icon {
+  color: #ffca28; /* Bright yellow color for feature icons */
+  margin-right: 10px; /* Adding some space between icon and text */
+  font-size: 1.5em; /* Increase the size of the icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Adding a smooth transition */
+}
+
+ul li:hover .feature-icon {
+  transform: rotate(20deg) scale(1.2); /* Rotate and scale the icon on hover */
+  color: #ff6f61; /* Change icon color on hover */
+}
+
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6f61 0%, #d45079 100%); /* Gradient background for the button */
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 25px; /* Larger padding */
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition for transform */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #e55b50 0%, #c03856 100%);
+  transform: scale(1.1); /* Scale up more on hover */
+}
